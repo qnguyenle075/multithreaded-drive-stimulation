@@ -51,8 +51,8 @@ class MainFrame(ctk.CTkFrame):
 
         title = ctk.CTkLabel(
             master=frame1,
-            text="MULTITHREAD UPLOADER AND DOWNLOADER",
-            font=('Arial',16),
+            text="MULTITHREADED DRIVE STIMULATOR",
+            font=('Arial',30),
         )
         title.pack(
             padx=16, pady=16,
@@ -192,7 +192,7 @@ class UploadFrame(ctk.CTkFrame):
     def open_file_dialog(self):
         file_path = filedialog.askopenfilename(
             title="Select a File",
-            filetypes=(("All files", "*.*"),)
+            filetypes=(("All files", "*.*"), ("Text files", "*.txt"), ("Image files", "*.jpg *.png"), ("PDF files", "*.pdf"), ("Word files", "*.docx"))
         )
         if file_path:
             self.file_label.configure(text=f"Selected file: {self.truncate_text(text=file_path, max_length=32)}")
