@@ -8,7 +8,7 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.geometry("500x400")
+        self.geometry("600x500")
         self.title("multithread uploader and downloader")
 
         container = ctk.CTkFrame(master=self)
