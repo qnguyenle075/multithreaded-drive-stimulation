@@ -174,7 +174,7 @@ class UploadFrame(ctk.CTkFrame):
         choose_file_frame = ctk.CTkFrame(master=frame2)
         choose_file_frame.grid(sticky="ew")
         choose_file_frame.grid_columnconfigure(0, weight=0)
-        # choose_file_frame.grid_columnconfigure(1, weight=1)
+        choose_file_frame.grid_columnconfigure(1, weight=1)
 
         choose_file_button = ctk.CTkButton(
             master=choose_file_frame,
@@ -189,6 +189,9 @@ class UploadFrame(ctk.CTkFrame):
 
         upload_button = ctk.CTkButton(master=frame2, text="Upload", font=('Arial',16))
         upload_button.grid(row=1, padx=16, sticky="w")
+
+        #upload_title1 = ctk.CTkLabel(master=frame2, text="UPLOAD FILE", font=('Roboto',40))
+        #upload_title1.grid(padx = 1, pady=1, sticky="nsew", row=0, column=0)
     
     def open_file_dialog(self):
         file_path = filedialog.askopenfilename(
