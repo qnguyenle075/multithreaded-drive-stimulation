@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from tkinter import filedialog
 from PIL import Image
+import os
 
 
 
@@ -195,7 +196,7 @@ class UploadFrame(ctk.CTkFrame):
             filetypes=(("All files", "*.*"), ("Text files", "*.txt"), ("Image files", "*.jpg *.png"), ("PDF files", "*.pdf"), ("Word files", "*.docx"))
         )
         if file_path:
-            self.file_label.configure(text=f"Selected file: {self.truncate_text(text=file_path, max_length=32)}")
+            self.file_label.configure(text=f"Selected file: {self.truncate_text(text=os.path.basename(file_path), max_length=32)}")
     
     def truncate_text(self, text, max_length):
             if len(text) > max_length:
